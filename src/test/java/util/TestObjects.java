@@ -24,4 +24,15 @@ public class TestObjects {
 		System.out.println(Objects.hashCode(a));
 	}
 	
+	@Test
+	public void testToString() {
+		Assert.assertEquals("null String", Objects.toString(null, "null String"));
+	}
+	
+	@Test
+	public void testRequireNoNull() {
+		Objects.requireNonNull(null);
+	}
+	
+	
 }
